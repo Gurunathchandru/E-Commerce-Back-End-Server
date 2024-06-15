@@ -1,0 +1,26 @@
+import { ApiProperty } from "@nestjs/swagger";
+import { IsAlphanumeric, IsNumber, maxLength } from "class-validator";
+
+export class ProductUpdateDto{
+
+    @ApiProperty()
+     @IsAlphanumeric()
+    p_name:string;
+
+    @ApiProperty()
+
+    p_price : number;
+
+    @ApiProperty()
+    @IsAlphanumeric()
+    sku: string;
+
+    @ApiProperty()
+    @IsAlphanumeric()
+    description :string;
+
+    @ApiProperty()
+    @IsAlphanumeric()
+    enabled:string;
+
+}
